@@ -2,7 +2,11 @@
 
 1. Run Env
 ```
+# Bash
 source /env/bin/activate
+
+# PowerShell or CMD
+.\env\Scripts\activate.bat
 ```
 
 2. Run Program
