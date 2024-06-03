@@ -1,15 +1,24 @@
 ### How running this program
 
-1. Run Env
+1. Run Environment
 ```
-# Bash
-source /env/bin/activate
+# Shell (MAC)
+python3 -m pipenv sync
 
-# PowerShell or CMD
-.\env\Scripts\activate.bat
+# CMD or PowerShell (Windows)
+py -m pipenv sync
 ```
 
-2. Run Program
+2. Initialize Environment
+```
+# Shell (MAC)
+python3 -m pipenv shell
+
+# CMD or PowerShell (Windows)
+py -m pipenv shell
+```
+
+3. Run Program
 ```
 cd main
 
@@ -17,5 +26,5 @@ cd main
 python3 manage.py runserver
 
 # Windows
-python manage.py runserver 
+py manage.py runserver 
 ```
