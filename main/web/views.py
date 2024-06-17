@@ -6,4 +6,11 @@ def main(request):
     return http.HttpResponse('Hello World this is new views from web')
 
 def web_render(request):
-    return render(request, 'index.html')
+    return render(request, 'main.html')
+
+def orders_view(request):
+    return render(request, 'orders.html')
+
+def calculator_view(request):
+    return render(request, 'calculator.html')
+

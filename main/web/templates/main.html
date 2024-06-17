@@ -1,0 +1,631 @@
+{% extends 'base.html' %} {% block title %} Home {% endblock title %} 
+{% block content %}
+<div class="container py-5">
+  <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+    <div class="col-10 col-sm-8 col-lg-6">
+      <img
+        src="https://www.coreldraw.com/static/cdgs/images/learn/guide-to-vector-design/how-do-vector-graphics-work/img-01.png"
+        class="d-block mx-lg-auto img-fluid"
+        alt="Bootstrap Themes"
+        width="700"
+        height="500"
+        loading="lazy"
+      />
+    </div>
+    <div class="col-lg-6">
+      <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
+        Body Mass Index (BMI)
+      </h1>
+      <p class="text-justify lh-lg">
+        Body Mass Index (BMI) adalah suatu ukuran yang digunakan untuk menilai
+        apakah seseorang memiliki berat badan yang sehat sesuai dengan tinggi
+        badannya. BMI dihitung dengan membagi berat badan seseorang dalam
+        kilogram (kg) dengan kuadrat tinggi badan dalam meter (m²).
+      </p>
+      <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+        <a
+          type="button"
+          href='{% url "calculator.view" %}'
+          class="btn btn-primary btn-lg px-4 me-md-2"
+          >Try it &raquo;</a
+        >
+        <a
+          type="button"
+          href="#bmi-information"
+          class="btn btn-outline-secondary btn-lg px-4"
+          >More information</a
+        >
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container py-4">
+  <div class="p-lg-5 mb-4 bg-body-tertiary rounded-3">
+    <div class="container-fluid py-5">
+      <h1 class="display-5 fw-bold pb-3">Kenapa BMI Itu penting?</h1>
+      <p class="lh-lg text-justify">
+        BMI digunakan untuk mengidentifikasi apakah seseorang memiliki berat
+        badan yang sehat, kurang berat badan, kelebihan berat badan, atau
+        obesitas. Memiliki berat badan yang sehat penting untuk mengurangi
+        risiko penyakit kronis seperti penyakit jantung, diabetes, dan
+        hipertensi. BMI adalah ukuran yang dihitung dengan membagi berat badan
+        seseorang dalam kilogram dengan tinggi badan mereka dalam meter kuadrat
+        (kg/m²). Ini adalah alat yang sederhana namun efektif untuk
+        mengkategorikan berat badan seseorang berdasarkan tinggi badan mereka.
+      </p>
+
+      <p class="lh-lg text-justify">
+        Penggunaan BMI berlaku untuk semua orang, terutama orang dewasa, tetapi
+        hasilnya harus diinterpretasikan dengan hati-hati pada anak-anak,
+        remaja, dan orang tua karena faktor-faktor seperti usia, jenis kelamin,
+        dan tingkat aktivitas fisik. BMI sering dihitung selama pemeriksaan
+        kesehatan rutin, ketika seseorang sedang menjalani program penurunan
+        atau peningkatan berat badan, atau sebagai bagian dari evaluasi
+        kesehatan secara berkala.
+      </p>
+    </div>
+  </div>
+
+  <div class="row align-items-md-stretch">
+    <div class="col-md-6">
+      <div class="h-100 p-5 text-bg-dark rounded-3 lh-lg">
+        <h2>Risiko yang terkait dengan kelebihan berat badan</h2>
+        <p class="text-justify">
+          Kelebihan berat badan meningkatkan risiko sejumlah penyakit dan
+          kondisi kesehatan yang serius. Berikut adalah daftar risiko tersebut
+          menurut Centers for Disease Control and Prevention (CDC):
+        </p>
+        <ul>
+          <li>Tekanan darah tinggi</li>
+          <li>
+            Kadar kolesterol LDL yang lebih tinggi, yang dianggap sebagai
+            "kolesterol jahat," kadar kolesterol HDL yang lebih rendah, yang
+            dianggap baik dalam jumlah sedang, dan kadar trigliserida yang
+            tinggi
+          </li>
+          <li>Diabetes tipe II</li>
+          <li>Penyakit jantung koroner</li>
+          <li>Stroke</li>
+          <li>Penyakit kandung empedu</li>
+          <li>
+            Osteoartritis, jenis penyakit sendi yang disebabkan oleh kerusakan
+            tulang rawan sendi
+          </li>
+          <li>Sleep apnea dan masalah pernapasan</li>
+          <li>
+            Kanker tertentu (endometrium, payudara, usus besar, ginjal, kandung
+            empedu, hati)
+          </li>
+          <li>Kualitas hidup yang rendah</li>
+          <li>
+            Penyakit mental seperti depresi klinis, kecemasan, dan lainnya
+          </li>
+          <li>Nyeri tubuh dan kesulitan dengan fungsi fisik tertentu</li>
+          <li>
+            Secara umum, peningkatan risiko kematian dibandingkan dengan mereka
+            yang memiliki BMI sehat
+          </li>
+        </ul>
+
+        <p class="text-justify">
+          Dari daftar di atas, terlihat bahwa ada banyak hasil negatif, dalam
+          beberapa kasus fatal, yang dapat terjadi akibat kelebihan berat badan.
+          Secara umum, seseorang sebaiknya mencoba mempertahankan BMI di bawah
+          25 kg/m², tetapi sebaiknya konsultasikan dengan dokter untuk
+          menentukan apakah perlu membuat perubahan pada gaya hidup mereka untuk
+          menjadi lebih sehat
+        </p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="h-100 p-5 bg-body-tertiary border rounded-3 lh-lg">
+        <h2>Risiko yang terkait dengan kekurangan berat badan</h2>
+        <p class="text-justify">
+          Kekurangan berat badan memiliki risiko tersendiri, yang tercantum di
+          bawah ini:
+        </p>
+        <ul>
+          <li>
+            Malnutrisi, kekurangan vitamin, anemia (penurunan kemampuan membawa
+            oksigen dalam darah)
+          </li>
+          <li>
+            Osteoporosis, penyakit yang menyebabkan kelemahan tulang,
+            meningkatkan risiko patah tulang
+          </li>
+          <li>Penurunan fungsi kekebalan tubuh</li>
+          <li>
+            Masalah pertumbuhan dan perkembangan, terutama pada anak-anak dan
+            remaja
+          </li>
+          <li>
+            Masalah reproduksi potensial pada wanita karena ketidakseimbangan
+            hormon yang dapat mengganggu siklus menstruasi. Wanita yang
+            kekurangan berat badan juga memiliki risiko lebih tinggi untuk
+            keguguran pada trimester pertama
+          </li>
+          <li>Potensi komplikasi sebagai akibat dari operasi</li>
+          <li>
+            Secara umum, peningkatan risiko kematian dibandingkan dengan mereka
+            yang memiliki BMI sehat
+          </li>
+        </ul>
+
+        <p class="text-justify">
+          Dalam beberapa kasus, kekurangan berat badan bisa menjadi tanda dari
+          kondisi atau penyakit yang mendasarinya seperti anoreksia nervosa,
+          yang memiliki risiko tersendiri. Konsultasikan dengan dokter jika Anda
+          atau seseorang yang Anda kenal kekurangan berat badan, terutama jika
+          alasan kekurangan berat badan tersebut tidak jelas.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <footer class="pt-3 mt-4 text-body-secondary border-top">© 2024</footer>
+</div>
+
+<div class="container px-4 py-5" id="bmi-information">
+  <h2 class="py-2 border-bottom">Jenis-jenis tubuh berdasarkan BMI</h2>
+
+  <div class=''>
+    <p>
+        Perhitungan BMI (Body Mass Index) dilakukan dengan menggunakan berat badan dan tinggi badan seseorang. Berikut adalah langkah-langkah untuk menghitung BMI:
+    </p>
+
+    <ol>
+        <li><span class='fw-bold'>Ukur Berat Badan</span>: Timbang berat badan Anda dalam kilogram (kg).</li>
+        <li><span class='fw-bold'>Ukur Tinggi Badan</span>: Ukur tinggi badan Anda dalam meter (m).</li>
+    </ol>
+
+    <code class='py-5 d-block fs-5 text-center'>
+        BMI = Berat Badan (kg)/ Tinggi Badan (m)<sup>2</sup>
+    </code>
+
+    <p>BMI diklasifikasikan sebagai dibawah ini:</p>
+
+    <table class="table table-transparent table-borderless lh-lg text-center">
+      <thead>
+        <tr>
+          <th scope="col">BMI</th>
+          <th scope="col">Klasifikasi</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class='table-primary'>
+          <td>Dibawah 18.5</td>
+          <td>Kekurangan Berat Badan</td>
+        </tr>
+        <tr class='table-success'>
+          <td>18.5 – 24.9</td>
+          <td>Berat yang sehat</td>
+        </tr>
+        <tr class='table-warning'>
+          <td>25.0 – 29.9</td>
+          <td>Kelebihan Berat Badan</td>
+        </tr>
+        <tr class='table-danger'>
+          <td>30.0 atau lebih</td>
+          <td>Obesitas</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+    <div class="feature col">
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+      >
+        <svg class="bi bg-primary" width="100%" height="1em">
+          <use xlink:href="#collection"></use>
+        </svg>
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Kekurangan Berat Badan</h3>
+      <p class="text-justify">
+        Orang dengan kekurangan berat badan berisiko mengalami berbagai masalah
+        kesehatan termasuk sistem kekebalan tubuh yang lemah, kekurangan vitamin
+        dan mineral, gangguan hormon, masalah pertumbuhan dan perkembangan,
+        serta penurunan massa otot.
+      </p>
+    </div>
+    <div class="feature col">
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+      >
+        <svg class="bi bg-success" width="100%" height="1em">
+          <use xlink:href="#collection"></use>
+        </svg>
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Berat yang Sehat</h3>
+      <p class="text-justify">
+        Kisaran ini menunjukkan bahwa berat badan seseorang dianggap
+        proporsional dengan tinggi badannya, dan tidak menimbulkan risiko
+        kesehatan yang signifikan. Memiliki berat badan yang sehat penting untuk
+        menjaga keseimbangan tubuh, fungsi organ yang optimal, dan mengurangi
+        risiko penyakit kronis seperti penyakit jantung, diabetes, dan
+        hipertensi.
+      </p>
+    </div>
+    <div class="feature col">
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+      >
+        <svg class="bi bg-warning" width="100%" height="1em">
+          <use xlink:href="#collection"></use>
+        </svg>
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Kelebihan Berat Badan</h3>
+      <p class="text-justify">
+        Klasifikasi ini menunjukkan bahwa berat badan seseorang lebih tinggi
+        dari yang dianggap sehat untuk tinggi badannya, yang dapat meningkatkan
+        risiko berbagai masalah kesehatan. Kelebihan berat badan sering kali
+        disebabkan oleh asupan kalori yang melebihi kebutuhan tubuh, kurangnya
+        aktivitas fisik, atau faktor genetik dan lingkungan.
+      </p>
+    </div>
+    <div class="feature col">
+      <div
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
+      >
+        <svg class="bi bg-danger" width="100%" height="1em">
+          <use xlink:href="#collection"></use>
+        </svg>
+      </div>
+      <h3 class="fs-2 text-body-emphasis">Obesitas</h3>
+      <p class="text-justify">
+        Orang dengan obesitas memiliki risiko yang jauh lebih tinggi untuk berbagai penyakit serius dibandingkan dengan mereka yang kelebihan berat badan. Ini termasuk penyakit jantung koroner, diabetes tipe II, hipertensi, beberapa jenis kanker (seperti kanker payudara, usus besar, dan endometrium), sleep apnea, osteoartritis, dan penyakit hati berlemak non-alkohol. Risiko-risiko ini lebih parah dan lebih mungkin untuk mempengaruhi kesehatan dan kualitas hidup secara signifikan.
+      </p>
+    </div>
+  </div>
+</div>
+
+{% comment %} <div class="container py-3">
+  <header>
+    <div class="pricing-header p-3 pb-md-4 mx-auto text-center">
+      <h1 class="display-4 fw-normal text-body-emphasis">Pricing</h1>
+      <p class="fs-5 text-body-secondary">
+        Quickly build an effective pricing table for your potential customers
+        with this Bootstrap example. It’s built with default Bootstrap
+        components and utilities with little customization.
+      </p>
+    </div>
+  </header>
+
+  <main>
+    <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Free</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              $0<small class="text-body-secondary fw-light">/mo</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>10 users included</li>
+              <li>2 GB of storage</li>
+              <li>Email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-outline-primary">
+              Sign up for free
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+          <div class="card-header py-3">
+            <h4 class="my-0 fw-normal">Pro</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              $15<small class="text-body-secondary fw-light">/mo</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>20 users included</li>
+              <li>10 GB of storage</li>
+              <li>Priority email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">
+              Get started
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm border-primary">
+          <div class="card-header py-3 text-bg-primary border-primary">
+            <h4 class="my-0 fw-normal">Enterprise</h4>
+          </div>
+          <div class="card-body">
+            <h1 class="card-title pricing-card-title">
+              $29<small class="text-body-secondary fw-light">/mo</small>
+            </h1>
+            <ul class="list-unstyled mt-3 mb-4">
+              <li>30 users included</li>
+              <li>15 GB of storage</li>
+              <li>Phone and email support</li>
+              <li>Help center access</li>
+            </ul>
+            <button type="button" class="w-100 btn btn-lg btn-primary">
+              Contact us
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="display-6 text-center mb-4">Compare plans</h2>
+
+    <div class="table-responsive">
+      <table class="table text-center">
+        <thead>
+          <tr>
+            <th style="width: 34%"></th>
+            <th style="width: 22%">Free</th>
+            <th style="width: 22%">Pro</th>
+            <th style="width: 22%">Enterprise</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Public</th>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Private</th>
+            <td></td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+
+        <tbody>
+          <tr>
+            <th scope="row" class="text-start">Permissions</th>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Sharing</th>
+            <td></td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Unlimited members</th>
+            <td></td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row" class="text-start">Extra security</th>
+            <td></td>
+            <td></td>
+            <td>
+              <svg class="bi" width="24" height="24">
+                <use xlink:href="#check"></use>
+              </svg>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div> {% endcomment %}
+
+<div class="container">
+  <main>
+    <div class="py-5 text-center">
+      <h2>Feedback</h2>
+      <p class="lead">
+        Berikan feedback anda terhadap BMI yang kami miliki, jika ada saran atau kritik bisa anda kirimkan melalui form yang ada dibawah ini
+      </p>
+    </div>
+
+    <div class="row g-5 py-5">
+      <div class="col-md-12 col-lg-12">
+        <h4 class="mb-3">User Information</h4>
+        <form class="needs-validation">
+          <div class="row g-3">
+            <div class="col-sm-12 col-md-6">
+              <label for="firstName" class="form-label">First name</label>
+              <input type="text" class="form-control" id="firstName" placeholder="John" required>
+              <div class="invalid-feedback">
+                Valid first name is required.
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6">
+              <label for="lastName" class="form-label">Last name</label>
+              <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
+              <div class="invalid-feedback">
+                Valid last name is required.
+              </div>
+            </div>
+
+            <div class="col-12">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
+              <div class="invalid-feedback">
+                Please enter a valid email address for shipping updates.
+              </div>
+            </div>
+
+          <button class="w-100 btn btn-primary btn-lg" type="submit">Submit </button>
+        </form>
+      </div>
+    </div>
+  </main>
+</div>
+
+<div class="container">
+  <footer class="py-5">
+    <div class="row">
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-6 col-md-2 mb-3">
+        <h5>Section</h5>
+        <ul class="nav flex-column">
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
+          </li>
+          <li class="nav-item mb-2">
+            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="col-md-5 offset-md-1 mb-3">
+        <form>
+          <h5>Subscribe to our newsletter</h5>
+          <p>Monthly digest of what's new and exciting from us.</p>
+          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+            <label for="newsletter1" class="visually-hidden"
+              >Email address</label
+            >
+            <input
+              id="newsletter1"
+              type="text"
+              class="form-control"
+              placeholder="Email address"
+            />
+            <button class="btn btn-primary" type="button">Subscribe</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div
+      class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
+      <p>© 2024 Company, Inc. All rights reserved.</p>
+      <ul class="list-unstyled d-flex">
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#"
+            ><svg class="bi" width="24" height="24">
+              <use xlink:href="#twitter"></use></svg></a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#"
+            ><svg class="bi" width="24" height="24">
+              <use xlink:href="#instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li class="ms-3">
+          <a class="link-body-emphasis" href="#">
+            <svg class="bi" width="24" height="24">
+              <use xlink:href="#facebook"></use></svg>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</div>
+
+{% endblock content %}
