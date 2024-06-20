@@ -3,9 +3,178 @@
 {% block title %} Calculator {% endblock title %}
 
 {% block content %}
+<div class="container py-5 px-4">
+    <h3>BMI Calculator</h3>
+    <div class="row py-3 g-5 align-items-center">
+        <div class="col-12 col-sm-6">
+            <form method="post">
+                {% csrf_token %}
+                <div class="form-floating mb-3">
+                    <input type="number" class="form-control" name="tinggi" id="tinggi-badan" placeholder="173 CM"
+                        min="1" required>
+                    <label for="tinggi-badan">Tinggi Badan (CM)</label>
+                </div>
+                <div class="form-floating">
+                    <input type="number" class="form-control" name="berat" id="berat-badan" placeholder="73 KG" min="1"
+                        required>
+                    <label for="berat-badan">Berat Badan (KG)</label>
+                </div>
+                <button class="btn btn-primary mt-3" type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="col-12 col-sm-6">
+            <div class="progress-stacked" style="height: 1.5rem;">
+                <div class="progress" role="progressbar" aria-label="Segment one" aria-valuenow="15" aria-valuemin="0"
+                    aria-valuemax="100" style="width: 25%; height: 100%;">
+                    <div class="progress-bar"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment two" aria-valuenow="30" aria-valuemin="0"
+                    aria-valuemax="100" style="width: 25%; height: 100%;">
+                    <div class="progress-bar bg-success"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0"
+                    aria-valuemax="100" style="width: 25%; height: 100%;">
+                    <div class="progress-bar bg-warning"></div>
+                </div>
+                <div class="progress" role="progressbar" aria-label="Segment three" aria-valuenow="20" aria-valuemin="0"
+                    aria-valuemax="100" style="width: 25%; height: 100%;">
+                    <div class="progress-bar bg-danger"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
 
-<div class="container py-5">
-    <h1>This is calculator page</h1>
+{% if result %}
+<div class="container py-4 px-4 {{bg}} rounded">
+    <h3>Result</h3>
+    <p>BMI: {{result}}</p>
+
+    <p>Range : {{tips.bmi_range}}</p>
+    <p>Klasifikasi: {{tips.name}}</p>
+
+    <h4>Tips</h4>
+    <ul class="lh-lg">
+        {% for tip in tips.tips %}
+            <li>{{tip.tip}}</li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+<div class="container px-4 py-5" id="bmi-information">
+    <h2 class="py-2 border-bottom">Jenis-jenis tubuh berdasarkan BMI</h2>
+
+    <div class=''>
+        <p>
+            Perhitungan BMI (Body Mass Index) dilakukan dengan menggunakan berat badan dan tinggi badan seseorang.
+            Berikut adalah langkah-langkah untuk menghitung BMI:
+        </p>
+
+        <ol>
+            <li><span class='fw-bold'>Ukur Berat Badan</span>: Timbang berat badan Anda dalam kilogram (kg).</li>
+            <li><span class='fw-bold'>Ukur Tinggi Badan</span>: Ukur tinggi badan Anda dalam meter (m).</li>
+        </ol>
+
+        <code class='py-5 d-block fs-5 text-center'>
+        BMI = Berat Badan (kg)/ Tinggi Badan (m)<sup>2</sup>
+    </code>
+
+        <p>BMI diklasifikasikan sebagai dibawah ini:</p>
+
+        <table class="table table-transparent table-borderless lh-lg text-center">
+            <thead>
+                <tr>
+                    <th scope="col">BMI</th>
+                    <th scope="col">Klasifikasi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class='table-primary'>
+                    <td>Dibawah 18.5</td>
+                    <td>Kekurangan Berat Badan</td>
+                </tr>
+                <tr class='table-success'>
+                    <td>18.5 – 24.9</td>
+                    <td>Berat yang sehat</td>
+                </tr>
+                <tr class='table-warning'>
+                    <td>25.0 – 29.9</td>
+                    <td>Kelebihan Berat Badan</td>
+                </tr>
+                <tr class='table-danger'>
+                    <td>30.0 atau lebih</td>
+                    <td>Obesitas</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
+        <div class="feature col">
+            <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi bg-primary" width="100%" height="1em">
+                    <use xlink:href="#collection"></use>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Kekurangan Berat Badan</h3>
+            <p class="text-justify">
+                Orang dengan kekurangan berat badan berisiko mengalami berbagai masalah
+                kesehatan termasuk sistem kekebalan tubuh yang lemah, kekurangan vitamin
+                dan mineral, gangguan hormon, masalah pertumbuhan dan perkembangan,
+                serta penurunan massa otot.
+            </p>
+        </div>
+        <div class="feature col">
+            <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi bg-success" width="100%" height="1em">
+                    <use xlink:href="#collection"></use>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Berat yang Sehat</h3>
+            <p class="text-justify">
+                Kisaran ini menunjukkan bahwa berat badan seseorang dianggap
+                proporsional dengan tinggi badannya, dan tidak menimbulkan risiko
+                kesehatan yang signifikan. Memiliki berat badan yang sehat penting untuk
+                menjaga keseimbangan tubuh, fungsi organ yang optimal, dan mengurangi
+                risiko penyakit kronis seperti penyakit jantung, diabetes, dan
+                hipertensi.
+            </p>
+        </div>
+        <div class="feature col">
+            <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi bg-warning" width="100%" height="1em">
+                    <use xlink:href="#collection"></use>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Kelebihan Berat Badan</h3>
+            <p class="text-justify">
+                Klasifikasi ini menunjukkan bahwa berat badan seseorang lebih tinggi
+                dari yang dianggap sehat untuk tinggi badannya, yang dapat meningkatkan
+                risiko berbagai masalah kesehatan. Kelebihan berat badan sering kali
+                disebabkan oleh asupan kalori yang melebihi kebutuhan tubuh, kurangnya
+                aktivitas fisik, atau faktor genetik dan lingkungan.
+            </p>
+        </div>
+        <div class="feature col">
+            <div
+                class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
+                <svg class="bi bg-danger" width="100%" height="1em">
+                    <use xlink:href="#collection"></use>
+                </svg>
+            </div>
+            <h3 class="fs-2 text-body-emphasis">Obesitas</h3>
+            <p class="text-justify">
+                Orang dengan obesitas memiliki risiko yang jauh lebih tinggi untuk berbagai penyakit serius dibandingkan
+                dengan mereka yang kelebihan berat badan. Ini termasuk penyakit jantung koroner, diabetes tipe II,
+                hipertensi, beberapa jenis kanker (seperti kanker payudara, usus besar, dan endometrium), sleep apnea,
+                osteoartritis, dan penyakit hati berlemak non-alkohol. Risiko-risiko ini lebih parah dan lebih mungkin
+                untuk mempengaruhi kesehatan dan kualitas hidup secara signifikan.
+            </p>
+        </div>
+    </div>
 </div>
 {% endblock content %}
-
