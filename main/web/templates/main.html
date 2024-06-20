@@ -1,16 +1,11 @@
-{% extends 'base.html' %} {% block title %} Home {% endblock title %} 
+{% extends 'base.html' %} {% block title %} Home {% endblock title %}
 {% block content %}
 <div class="container py-5" id="home">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img
         src="https://cdn1-production-images-kly.akamaized.net/HNRlxMMpQLjXtLOHojftoM-zaJk=/1200x675/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3601807/original/076920300_1634175165-flat-hand-drawn-dance-fitness-class-illustration_23-2148867249.jpg"
-        class="d-block mx-lg-auto img-fluid"
-        alt="Bootstrap Themes"
-        width="700"
-        height="500"
-        loading="lazy"
-      />
+        class="d-block mx-lg-auto img-fluid rounded-5" alt="Bootstrap Themes" width="700" height="500" loading="lazy" />
     </div>
     <div class="col-lg-6">
       <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">
@@ -23,18 +18,9 @@
         kilogram (kg) dengan kuadrat tinggi badan dalam meter (m²).
       </p>
       <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-        <a
-          type="button"
-          href='{% url "calculator.view" %}'
-          class="btn btn-primary btn-lg px-4 me-md-2"
-          >Try it &raquo;</a
-        >
-        <a
-          type="button"
-          href="#bmi-information"
-          class="btn btn-outline-secondary btn-lg px-4"
-          >More information</a
-        >
+        <a type="button" href='{% url "calculator.view" %}' class="btn btn-primary btn-lg px-4 me-md-2">Try it
+          &raquo;</a>
+        <a type="button" href="#bmi-information" class="btn btn-outline-secondary btn-lg px-4">More information</a>
       </div>
     </div>
   </div>
@@ -169,12 +155,13 @@
 
   <div class=''>
     <p>
-        Perhitungan BMI (Body Mass Index) dilakukan dengan menggunakan berat badan dan tinggi badan seseorang. Berikut adalah langkah-langkah untuk menghitung BMI:
+      Perhitungan BMI (Body Mass Index) dilakukan dengan menggunakan berat badan dan tinggi badan seseorang. Berikut
+      adalah langkah-langkah untuk menghitung BMI:
     </p>
 
     <ol>
-        <li><span class='fw-bold'>Ukur Berat Badan</span>: Timbang berat badan Anda dalam kilogram (kg).</li>
-        <li><span class='fw-bold'>Ukur Tinggi Badan</span>: Ukur tinggi badan Anda dalam meter (m).</li>
+      <li><span class='fw-bold'>Ukur Berat Badan</span>: Timbang berat badan Anda dalam kilogram (kg).</li>
+      <li><span class='fw-bold'>Ukur Tinggi Badan</span>: Ukur tinggi badan Anda dalam meter (m).</li>
     </ol>
 
     <code class='py-5 d-block fs-5 text-center'>
@@ -214,8 +201,7 @@
   <div class="row g-4 py-5 row-cols-1 row-cols-lg-2">
     <div class="feature col">
       <div
-        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
-      >
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
         <svg class="bi bg-primary" width="100%" height="1em">
           <use xlink:href="#collection"></use>
         </svg>
@@ -230,8 +216,7 @@
     </div>
     <div class="feature col">
       <div
-        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
-      >
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
         <svg class="bi bg-success" width="100%" height="1em">
           <use xlink:href="#collection"></use>
         </svg>
@@ -248,8 +233,7 @@
     </div>
     <div class="feature col">
       <div
-        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
-      >
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
         <svg class="bi bg-warning" width="100%" height="1em">
           <use xlink:href="#collection"></use>
         </svg>
@@ -265,64 +249,49 @@
     </div>
     <div class="feature col">
       <div
-        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3"
-      >
+        class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
         <svg class="bi bg-danger" width="100%" height="1em">
           <use xlink:href="#collection"></use>
         </svg>
       </div>
       <h3 class="fs-2 text-body-emphasis">Obesitas</h3>
       <p class="text-justify">
-        Orang dengan obesitas memiliki risiko yang jauh lebih tinggi untuk berbagai penyakit serius dibandingkan dengan mereka yang kelebihan berat badan. Ini termasuk penyakit jantung koroner, diabetes tipe II, hipertensi, beberapa jenis kanker (seperti kanker payudara, usus besar, dan endometrium), sleep apnea, osteoartritis, dan penyakit hati berlemak non-alkohol. Risiko-risiko ini lebih parah dan lebih mungkin untuk mempengaruhi kesehatan dan kualitas hidup secara signifikan.
+        Orang dengan obesitas memiliki risiko yang jauh lebih tinggi untuk berbagai penyakit serius dibandingkan dengan
+        mereka yang kelebihan berat badan. Ini termasuk penyakit jantung koroner, diabetes tipe II, hipertensi, beberapa
+        jenis kanker (seperti kanker payudara, usus besar, dan endometrium), sleep apnea, osteoartritis, dan penyakit
+        hati berlemak non-alkohol. Risiko-risiko ini lebih parah dan lebih mungkin untuk mempengaruhi kesehatan dan
+        kualitas hidup secara signifikan.
       </p>
     </div>
   </div>
 </div>
-<!-- 
+
 <div class="container">
-  <main>
-    <div class="py-5 text-center">
-      <h2>Feedback</h2>
-      <p class="lead">
-        Berikan feedback anda terhadap BMI yang kami miliki, jika ada saran atau kritik bisa anda kirimkan melalui form yang ada dibawah ini
-      </p>
-    </div>
-
-    <div class="row g-5 py-5">
-      <div class="col-md-12 col-lg-12">
-        <h4 class="mb-3">User Information</h4>
-        <form class="needs-validation">
-          <div class="row g-3">
-            <div class="col-sm-12 col-md-6">
-              <label for="firstName" class="form-label">First name</label>
-              <input type="text" class="form-control" id="firstName" placeholder="John" required>
-              <div class="invalid-feedback">
-                Valid first name is required.
-              </div>
-            </div>
-
-            <div class="col-sm-12 col-md-6">
-              <label for="lastName" class="form-label">Last name</label>
-              <input type="text" class="form-control" id="lastName" placeholder="Doe" required>
-              <div class="invalid-feedback">
-                Valid last name is required.
-              </div>
-            </div>
-
-            <div class="col-12">
-              <label for="email" class="form-label">Email</label>
-              <input type="email" class="form-control" id="email" placeholder="you@example.com" required>
-              <div class="invalid-feedback">
-                Please enter a valid email address for shipping updates.
-              </div>
-            </div>
-
-          <button class="w-100 btn btn-primary btn-lg" type="submit">Submit </button>
-        </form>
+  <h3 class="text-center py-3 fs-1">Gallery</h3>
+  <div id="carouselExampleInterval" class="carousel slide ratio ratio-16x9" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img
+          src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1271937151-6478ab1407288.jpg?crop=1.00xw:1.00xh;0,0&resize=2048:*"
+          class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item" data-bs-interval="2000">
+        <img src="https://i.pinimg.com/originals/34/20/9c/34209c9b9096b4cfb2e0ff86e2653e88.jpg" class="d-block w-100"
+          alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="https://images.moneycontrol.com/static-mcnews/2023/07/Benefits-of-weekend-exercises.jpg?impolicy=website&width=1600&height=900" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img
+          src="https://www.telegraph.co.uk/content/dam/health-fitness/2022/01/13/TELEMMGLPICT000282682137_trans_NvBQzQNjv4BqyILZCJqFaBEpuz3ivC4GSmtT0gK_6EfZT336f62EI5U.jpeg"
+          class="d-block w-100" alt="...">
       </div>
     </div>
-  </main>
-</div> -->
+  </div>
+</div>
+
+
 
 <div class="container">
   <footer class="py-3 my-4">

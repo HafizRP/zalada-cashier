@@ -29,7 +29,7 @@ tips = {
     ]
   },
   "normal_weight": {
-    "name": "Berat yang sehat",
+    "name": "Berat yang ideal",
     "bmi_range": "18.5 - 24.9",
     "tips": [
       {
