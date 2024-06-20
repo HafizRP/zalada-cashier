@@ -1,10 +1,10 @@
 {% extends 'base.html' %} {% block title %} Home {% endblock title %} 
 {% block content %}
-<div class="container py-5">
+<div class="container py-5" id="home">
   <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <div class="col-10 col-sm-8 col-lg-6">
       <img
-        src="https://www.coreldraw.com/static/cdgs/images/learn/guide-to-vector-design/how-do-vector-graphics-work/img-01.png"
+        src="https://cdn1-production-images-kly.akamaized.net/HNRlxMMpQLjXtLOHojftoM-zaJk=/1200x675/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3601807/original/076920300_1634175165-flat-hand-drawn-dance-fitness-class-illustration_23-2148867249.jpg"
         class="d-block mx-lg-auto img-fluid"
         alt="Bootstrap Themes"
         width="700"
@@ -40,7 +40,7 @@
   </div>
 </div>
 
-<div class="container py-4">
+<div class="container py-4" id="about">
   <div class="p-lg-5 mb-4 bg-body-tertiary rounded-3">
     <div class="container-fluid py-5">
       <h1 class="display-5 fw-bold pb-3">Kenapa BMI Itu penting?</h1>
@@ -162,8 +162,6 @@
       </div>
     </div>
   </div>
-
-  <footer class="pt-3 mt-4 text-body-secondary border-top">© 2024</footer>
 </div>
 
 <div class="container px-4 py-5" id="bmi-information">
@@ -280,7 +278,7 @@
     </div>
   </div>
 </div>
-
+<!-- 
 <div class="container">
   <main>
     <div class="py-5 text-center">
@@ -324,118 +322,16 @@
       </div>
     </div>
   </main>
-</div>
+</div> -->
 
 <div class="container">
-  <footer class="py-5">
-    <div class="row">
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-6 col-md-2 mb-3">
-        <h5>Section</h5>
-        <ul class="nav flex-column">
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Home</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Features</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">Pricing</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">FAQs</a>
-          </li>
-          <li class="nav-item mb-2">
-            <a href="#" class="nav-link p-0 text-body-secondary">About</a>
-          </li>
-        </ul>
-      </div>
-
-      <div class="col-md-5 offset-md-1 mb-3">
-        <form>
-          <h5>Subscribe to our newsletter</h5>
-          <p>Monthly digest of what's new and exciting from us.</p>
-          <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-            <label for="newsletter1" class="visually-hidden"
-              >Email address</label
-            >
-            <input
-              id="newsletter1"
-              type="text"
-              class="form-control"
-              placeholder="Email address"
-            />
-            <button class="btn btn-primary" type="button">Subscribe</button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <div
-      class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top">
-      <p>© 2024 Company, Inc. All rights reserved.</p>
-      <ul class="list-unstyled d-flex">
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#"
-            ><svg class="bi" width="24" height="24">
-              <use xlink:href="#twitter"></use></svg></a>
-        </li>
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#"
-            ><svg class="bi" width="24" height="24">
-              <use xlink:href="#instagram"></use>
-            </svg>
-          </a>
-        </li>
-        <li class="ms-3">
-          <a class="link-body-emphasis" href="#">
-            <svg class="bi" width="24" height="24">
-              <use xlink:href="#facebook"></use></svg>
-            </a>
-        </li>
-      </ul>
-    </div>
+  <footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+      <li class="nav-item"><a href="#home" class="nav-link px-2 text-body-secondary">Home</a></li>
+      <li class="nav-item"><a href="#about" class="nav-link px-2 text-body-secondary">About</a></li>
+      <li class="nav-item"><a href="#bmi-information" class="nav-link px-2 text-body-secondary">BMI</a></li>
+    </ul>
+    <p class="text-center text-body-secondary">© 2024 </p>
   </footer>
 </div>
 
